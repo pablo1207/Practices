@@ -42,5 +42,8 @@ ORDER BY TotalSold DESC;
 
 /*Ejercicio 7: Obtener el total de ventas por cada cliente
 Instrucción: Calcula el total de ventas (por cliente).*/
+SELECT CustomerID, SUM(TotalDue) AS TotalVentas
+FROM sales.salesorderheader
+GROUP BY CustomerID;
 
 /*Pista: Usa las tablas Sales.SalesOrderHeader (encabezados de órdenes de venta) y Sales.Customer (clientes).*/
